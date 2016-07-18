@@ -4,7 +4,7 @@ Creates a easily reusable TableViewController.
 ##Supported Platforms
 
 - iOS 9
-- swift 2.3
+- swift 2.2
 
 ##Installing
 
