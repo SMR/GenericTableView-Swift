@@ -28,12 +28,15 @@ In order to install, you'll need to copy the `GenericTableViewController` file i
 
 ###Sample:
 ```swift
-let config = ConfigureTable(items: ["John", "Clark", "Peter", "Tim", "Zack", "Adam"].sort(), cellType: UITableViewCell.self, configureCell: { (cell, item) in
-               cell.textLabel?.text = "\(item)"
-            }) { (tableView, indexPath) in
-                let cell = tableView.cellForRowAtIndexPath(indexPath)
-                print(cell?.textLabel?.text)
-        }
+let names = ["John", "Clark", "Peter", "Tim", "Zack", "Adam"].sort()
+let config = ConfigureTable(items: names, 
+                          cellType: UITableViewCell.self, 
+                          configureCell: { (cell, item) in
+                                        cell.textLabel?.text = "\(item)"
+                          }) { (tableView, indexPath) in
+                                        let cell = tableView.cellForRowAtIndexPath(indexPath)
+                                        print(cell?.textLabel?.text)
+                         }
         
 let main = GenericTableViewController(config: config)
 ```
